@@ -20,5 +20,26 @@ export function VIcon (props: React.SVGProps<SVGSVGElement>) {
 }
 
 export function BurgerMenuIcon (props: React.SVGProps<SVGSVGElement>) {
-  return (<svg width="1em" height="1em" viewBox="0 0 24 24" {...props}><path d="M2 20h20v-1.5H2V20zM2 5.5h20V4H2v1.5zm0 7.25h20v-1.5H2v1.5z"></path></svg>)
+  return (<svg width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M2 20h20v-1.5H2V20zM2 5.5h20V4H2v1.5zm0 7.25h20v-1.5H2v1.5z"></path></svg>)
+}
+
+export function MessageIcon (props: React.SVGProps<SVGSVGElement>) {
+  return (<svg width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M3.5 18.5V6.54l8.54 6.4 8.45-6.34v11.9H3.5zm15.95-13-7.41 5.56L4.62 5.5h14.83zM20.5 4h-17C2.67 4 2 4.67 2 5.5v13c0 .83.67 1.5 1.5 1.5h17c.82 0 1.5-.67 1.5-1.5v-13c0-.83-.68-1.5-1.5-1.5z"></path></svg>)
+}
+
+export function NotificationIcon (props: React.SVGProps<SVGSVGElement>) {
+  return <svg viewBox="0 0 24 24" height="1em" width="1em" {...props}><path fill="currentColor" d="M4.5 17.5c0-2.08 1.71-3.18 1.77-3.21l.73-.44V9a5.5 5.5 0 0 1 11 0v4l.01.84.7.44a4.01 4.01 0 0 1 1.79 3.22h-16zm8 3a2.5 2.5 0 0 1-2.29-1.5h4.58a2.5 2.5 0 0 1-2.29 1.5zm7-7.5V9a7 7 0 1 0-14 0v4S3 14.5 3 17.5c0 .83.67 1.5 1.5 1.5h4.14a4 4 0 0 0 7.72 0h4.14c.83 0 1.5-.67 1.5-1.5 0-3-2.5-4.5-2.5-4.5z"></path></svg>
+}
+
+export function HeartIcon (props: React.SVGProps<SVGSVGElement>) {
+  return <svg viewBox="0 0 24 24" height="1em" width="1em" {...props}><path fill="currentColor" d="M16.66 3C13.98 3 12 5.24 12 5.24S10.02 3 7.34 3a5.1 5.1 0 0 0-2.85.9c-3.65 2.42-3.1 7.53.43 10.93A105.1 105.1 0 0 0 12 21s3.8-2.99 7.09-6.17c3.51-3.4 4.08-8.51.42-10.93a5.1 5.1 0 0 0-2.85-.9m0 1.5c.7 0 1.35.21 2.02.66a3.9 3.9 0 0 1 1.8 2.98c.17 1.87-.74 3.97-2.44 5.61A100.22 100.22 0 0 1 12 19.07a100.22 100.22 0 0 1-6.04-5.32c-1.7-1.64-2.61-3.74-2.44-5.6a3.9 3.9 0 0 1 1.8-3 3.6 3.6 0 0 1 2.02-.65c1.95 0 3.53 1.72 3.54 1.73l1.11 1.25 1.13-1.24c.02-.02 1.59-1.74 3.54-1.74"></path></svg>
+}
+
+export function QuestionIcon (props: React.SVGProps<SVGSVGElement>) {
+  return <svg viewBox="0 0 24 24" height="1em" width="1em" {...props}>
+    <g fill="none" fillRule="evenodd">
+      <path d="M0 0h24v24H0z"></path>
+      <path fill="currentColor" d="M12.75 14.506h-1.5v-1.139c0-1.077.598-2.064 1.522-2.514a1.78 1.78 0 0 0 .927-2.068 1.741 1.741 0 0 0-1.218-1.218 1.766 1.766 0 0 0-1.559.305 1.75 1.75 0 0 0-.685 1.395h-1.5c0-1.017.46-1.958 1.266-2.58a3.285 3.285 0 0 1 2.853-.574 3.244 3.244 0 0 1 2.297 2.297c.398 1.542-.31 3.1-1.723 3.79-.413.202-.68.66-.68 1.167v1.139ZM12 2c5.523 0 10 4.478 10 10 0 5.523-4.477 10-10 10-5.524 0-10-4.477-10-10C2 6.479 6.476 2 12 2Zm0 1.5c-4.687 0-8.5 3.814-8.5 8.5 0 4.687 3.813 8.5 8.5 8.5 4.686 0 8.499-3.813 8.499-8.5 0-4.686-3.813-8.5-8.5-8.5Zm-1.003 13.507a1 1 0 1 1 2.001 0 1 1 0 1 1-2 0Z"></path>
+    </g>
+  </svg>
 }

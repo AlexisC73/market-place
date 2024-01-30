@@ -1,5 +1,6 @@
-import { VIcon, VintedIcon } from '@assets/icons'
-import BurgerBtn from '@components/common/BurgerBtn'
+import { BurgerMenuIcon, QuestionIcon, VIcon, VintedIcon } from '@assets/icons'
+import Button from '@components/common/Button'
+import IconBtn from '@components/common/IconBtn'
 import Searchbar from '@components/common/SearchBar'
 
 export const Header = () => {
@@ -12,9 +13,20 @@ export const Header = () => {
       <div id='search-bar' className='hidden lg:block lg:min-w-[500px]'>
         <Searchbar />
       </div>
-      <div id='header-right-content' className='lg:min-w-[200px]'>
+      <div id='header-right-content' className='lg:min-w-[200px] flex items-center'>
+        <div className='flex gap-x-2'>
+          <Button type='secondary'>S'inscrire | Se connecter</Button>
+          <Button>Vends tes articles</Button>
+        </div>
+        <div>
+          <IconBtn>
+          <QuestionIcon className='text-[24px]' />
+        </IconBtn>
+        </div>
         <div id='menu-toggle-btn' className='lg:hidden'>
-          <BurgerBtn />
+          <IconBtn>
+            <BurgerMenuIcon className='text-[24px]' />
+          </IconBtn>
         </div>
       </div>
     </header>
