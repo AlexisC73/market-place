@@ -1,5 +1,5 @@
 import { ArrowDown, SearchIcon } from '@assets/icons'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const SEARCH_OPTIONS = [
   { id: 1, name: 'Articles', searchText: 'Rechercher des articles' },
@@ -26,6 +26,7 @@ export const Searchbar = () => {
 
 const SearchSelect = ({ currentSelect, onSelect }: { currentSelect: { id: number, name: string, searchText: string }, onSelect: (id: number) => void }) => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const menuRef = useRef<HTMLDivElement>(null)
 
   const handleToggleMenu = () => {
     setMenuOpen(prev => !prev)
@@ -35,8 +36,22 @@ const SearchSelect = ({ currentSelect, onSelect }: { currentSelect: { id: number
     onSelect(id)
   }
 
+  const handleClickOutside = (e: MouseEvent) => {
+    if (menuRef.current != null && !menuRef.current.contains(e.target as Node)) {
+      setMenuOpen(false)
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside)
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside)
+    }
+  })
+
   return (
-  <div className='select items-center flex border-[#e1e1e1] border-r-[1px] relative'>
+  <div ref={menuRef} className='select items-center flex border-[#e1e1e1] border-r-[1px] relative'>
     <button onClick={handleToggleMenu} className="flex px-3 rounded-[4px] gap-x-1 items-center hover:bg-[#efefef] text-[#757575] h-full flex-1">
       <span className='text-[14px] text-nowrap'>{currentSelect.name}</span>
       <ArrowDown className='text-[1rem]' />
