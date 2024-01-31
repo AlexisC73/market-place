@@ -1,4 +1,4 @@
-import { QuestionIcon, VIcon, VintedIcon } from '@assets/icons'
+import { QuestionIcon, VintedIcon } from '@assets/icons'
 import IconBtn from '@components/common/IconBtn'
 import LangageSelect from '@components/common/LangageSelect'
 import Searchbar from '@components/common/SearchBar'
@@ -15,10 +15,9 @@ export const Header = () => {
   return <>
     <header className="w-full z-10">
       <div id='nav-header' className='border-b-[1px] border-[#ededed]'>
-        <div className='header-content h-[52px] lg:px-5 w-full flex lg:max-w-[1280px] px-5 mx-auto items-center justify-between'>
+        <div className='header-content h-[52px] lg:px-5 w-full flex lg:max-w-[1280px] px-2 mx-auto items-center justify-between'>
           <div id='brand-icon'>
-            <VintedIcon className='text-[44px] hidden lg:block' />
-            <VIcon className='lg:hidden' />
+            <VintedIcon className='text-[44px]' />
           </div>
           <div id='search-bar' className='hidden lg:block flex-1 px-16'>
             <Searchbar />
@@ -38,7 +37,7 @@ export const Header = () => {
         </div>
       </div>
       {menuOpen && (
-        <div id='header-menu-mobile' className='fixed top-[53px] z-10 inset-0 w-full'>
+        <div id='header-menu-mobile' className='fixed lg:hidden top-[53px] z-10 inset-0 w-full'>
           <MobileMenu />
         </div>
       )}
