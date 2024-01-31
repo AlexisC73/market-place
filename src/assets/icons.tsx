@@ -43,3 +43,7 @@ export function QuestionIcon (props: React.SVGProps<SVGSVGElement>) {
     </g>
   </svg>
 }
+
+export function CrossIcon (props: React.SVGProps<SVGSVGElement>) {
+  return <svg viewBox="0 0 24 24" height="1em" width="1em" {...props}><path fill="currentColor" d="M18.94 4L12 10.94 5.06 4 4 5.06 10.94 12 4 18.94 5.06 20 12 13.06 18.94 20 20 18.94 13.06 12 20 5.06z"></path></svg>
+}
